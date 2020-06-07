@@ -2,7 +2,9 @@ package LibraryApp;
 
 public class LibraryMain {
     public static void main(String[] args) {
-    Book book1 = new Book("Nniezwyciężony", "Stanisław Lem", 0);
+
+
+    Book book1 = new Book("Nniezwyciężony", "Stanisław Lem");
     Book book2 = new Book("Wojna i Pokój","Lew Tołstoj");
     Book book3 = new Book("Ogniem i Mieczem", "Henryk SIenkiewicz");
 
@@ -23,6 +25,6 @@ public class LibraryMain {
             System.out.println(foundBook);
         }
     }
-    }
-
 }
+
+
