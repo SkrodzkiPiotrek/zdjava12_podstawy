@@ -1,20 +1,24 @@
 package LibraryApp;
 
 
-
 public class Library {
 
     private Book[] books;
+    private Klient[] klients;
     private int firstEmptyIndex;
+    private int firstEmptyID;
 
     private static final int MAX_BOOKS_COUNT = 100;
+    private static final int MAX_KLIENT_COUNT = 100;
 
     public Library() {
         this.books = new Book[MAX_BOOKS_COUNT];
         this.firstEmptyIndex = 0;
+        this.klients = new Klient[MAX_KLIENT_COUNT];
+        this.firstEmptyID = 0;
     }
 
-    public void addBook(Book book){
+    public void addBook(Book book) {
         //todo a co w przypadku gdy ktos chce dodac 100 ksiązke?
         this.books[firstEmptyIndex] = book;
         firstEmptyIndex++;
@@ -23,13 +27,18 @@ public class Library {
 
     public void printBooks() {
 
-        for (int i = 0; i < firstEmptyIndex ; i++) {
+        for (int i = 0; i < firstEmptyIndex; i++) {
+            if (books[i] == null) {
+                continue;
+            } else {
+                System.out.println(books[i]);
+            }
 
-            System.out.println(this.books[i]);
 
         }
     }
-    public Book[] searchBook(String searchQuerry){
+
+    public Book[] searchBook(String searchQuerry) {
         Book[] searchResult = new Book[MAX_BOOKS_COUNT];
 
         int foundBooksCount = 0;
@@ -47,9 +56,9 @@ public class Library {
 
             }
         }
-            int actualIndex = 0;
-            //todo ile mamy wyszukanych książek??
-            Book[] searchResultToReturn = new Book[foundBooksCount];
+        int actualIndex = 0;
+        //todo ile mamy wyszukanych książek??
+        Book[] searchResultToReturn = new Book[foundBooksCount];
 
         for (int i = 0; i < searchResult.length; i++) {
             if (searchResult[i] != null) {
@@ -59,9 +68,30 @@ public class Library {
             }
         }
 
-            return searchResultToReturn;
+        return searchResultToReturn;
 
 
     }
 
+    public void addKlient(Klient klient) {
+        //todo a co w przypadku gdy ktos chce dodac 100 klienta?
+        this.klients[firstEmptyID] = klient;
+        firstEmptyID++;
+
+    }
+
+    public void printKlient() {
+
+        for (int i = 0; i < firstEmptyID; i++) {
+            if (klients[i] == null) {
+                continue;
+            } else {
+                System.out.println(klients[i]);
+            }
+        }
+    }
+
+
 }
+
+
