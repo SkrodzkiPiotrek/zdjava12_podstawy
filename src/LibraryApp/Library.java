@@ -1,6 +1,8 @@
 package LibraryApp;
 
 
+import java.util.Scanner;
+
 public class Library {
 
     private Book[] books;
@@ -92,6 +94,16 @@ public class Library {
     }
 
 
+    public void addKlient() {
+        System.out.println("Podaj dane klienta: ");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+
+    }
+
+    public void addBook() {
+        System.out.println("");
+    }
 }
 
 

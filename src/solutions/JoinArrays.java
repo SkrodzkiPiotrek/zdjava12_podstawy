@@ -5,27 +5,25 @@ import java.util.Random;
 public class JoinArrays {
 
 
-
     //[1,2,3,4][6,7,8,9]
     //[1,2,3,4, 6,7,8,9]
 
-    //zdanie polega na ty, żeby połączyć dwie tablice "w jedeno" :)
+    //zdanie polega na ty, żeby połączyć dwie tablice "w jedną" :)
 
-    int[] joinArrays(int[] left, int[] right){
+    int[] joinArrays(int[] left, int[] right) {
 
         int[] result = new int[left.length + right.length];
 
         //
         for (int i = 0; i < result.length; i++) {
 
-            if(i<left.length){
+            if (i < left.length) {
                 result[i] = left[i];
-            }else {
+            } else {
                 //resta rozwiązania
             }
 
         }
-
 
         return result;
     }
